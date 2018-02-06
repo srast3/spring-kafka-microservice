@@ -1,0 +1,17 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: email-service
+  profiles:
+    active: dev  
+  cloud:
+    config:
+      hostname: config-server
+      port: 8888
+      uri: http://${spring.cloud.config.hostname}:${spring.cloud.config.port}
+      fail-fast: false    
+#      discovery:
+#        enabled: true
+#        service-id: config-server
+        

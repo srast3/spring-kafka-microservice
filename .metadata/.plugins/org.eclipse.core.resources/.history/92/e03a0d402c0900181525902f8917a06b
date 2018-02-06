@@ -1,0 +1,18 @@
+spring:
+  profile:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/srast3/spring-kafka-ms.git/
+          search-paths:
+            - "EmailServiceConfigProperties/{application}/{profile}"
+
+eureka:
+  instance:
+    hostname: config-server
+  client:
+    registryFetchIntervalSeconds: 1
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/

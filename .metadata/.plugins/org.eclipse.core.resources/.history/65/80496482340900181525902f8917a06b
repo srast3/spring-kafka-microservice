@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    hostname: user-service
+  client:
+    registryFetchIntervalSeconds: 1
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
+    register-with-eureka: false
+    fetch-registry: false
