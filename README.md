@@ -36,7 +36,7 @@ This is a repository for building a Spring Boot microservice using NetflixOSS an
   - mvn clean install
   - java -jar target/EmailService-0.0.1-SNAPSHOT.jar
   
-####Test Microservice
+#### Test Microservice
 Once each micro service is setup and started correctly, you can test the complete flow by
 1. Create a new user by calling url – POST http://localhost:8081/register
 2. Verify that the new user is created.
