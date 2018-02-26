@@ -1,5 +1,7 @@
 # spring-kafka-microservice
-This is a repository for building a Spring Boot microservice using NetflixOSS and Apache Kafka
+This is a repository for building a Spring Boot microservice using NetflixOSS and Apache Kafka. 
+
+Read the complete blog here - https://crunchytechbytz.wordpress.com/2018/02/09/microservice-with-apache-kafka-netflix-oss/
 
 #### Prerequisite
 - Java 1.8
@@ -42,3 +44,10 @@ Once each micro service is setup and started correctly, you can test the complet
 2. Verify that the new user is created.
 3. You can also verify the user by calling – GET http://localhost:8081/member 
 4. Verify that registration success email was received at your email address
+
+#### Deploying micro service in docker container
+The same microservice can also be  deployed in docker containers and I have published a blog on same here -
+https://crunchytechbytz.wordpress.com/2018/02/25/deploy-a-spring-boot-microservice-with-netflix-oss-stack-in-docker-container/
+
+Simialry, if someone needs to refer to any help on installing Apache Kafka in docker container then they can refer here -
+https://crunchytechbytz.wordpress.com/2018/01/28/install-apache-kafka-in-docker-container/
