@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/srast3/spring-kafka-ms.git/
+          uri: https://github.com/srast3/spring-kafka-microservice.git/
           search-paths:
             - "EmailServiceConfigProperties/{application}/{profile}"
 
