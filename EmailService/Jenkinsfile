@@ -1,0 +1,34 @@
+ node {
+
+    withMaven(maven:'maven') {
+
+        stage('Checkout') {
+            git url: 'https://github.com/srast3/spring-kafka-microservice.git', credentialsId: 'github-piomin', branch: 'master'
+        }
+
+        stage('Build') {
+            sh 'mvn clean install'
+
+            def pom = readMavenPom file:'pom.xml'
+            print pom.version
+            env.version = pom.version
+        }
+
+        stage('Image') {
+            dir ('EmailService') {
+                def app = docker.build "localhost:5000/email-service:${env.version}"
+                app.push()
+            }
+        }
+
+        stage ('Run') {
+            docker.image("localhost:5000/email-service:${env.version}").run('-p 8888:8888 -h email-service --name email-service --link config-server')
+        }
+
+        stage ('Final') {
+            build job: 'user-service-pipeline', wait: false
+        }      
+
+    }
+
+}
