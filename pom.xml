@@ -22,7 +22,6 @@
 		<module>EurekaServer</module>
 		<module>ConfigServer</module>
 		<module>UserAccount</module>
-		<module>EmailServiceConfigProperties</module>
 		<module>EmailService</module>
 	</modules>
 
