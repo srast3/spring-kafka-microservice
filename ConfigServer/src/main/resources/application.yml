@@ -8,7 +8,6 @@ spring:
           uri: https://github.com/srast3/spring-kafka-microservice.git/
           search-paths:
             - "EmailServiceConfigProperties/{application}/{profile}"
-
 #eureka:
 #  instance:
 #    hostname: config-server
