@@ -1,6 +1,4 @@
 eureka:
-  instance:
-    hostname: user-service
   client:
     registryFetchIntervalSeconds: 1
     serviceUrl:

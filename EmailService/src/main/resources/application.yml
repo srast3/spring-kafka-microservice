@@ -1,6 +1,4 @@
 eureka:
-  instance:
-    hostname: email-service
   client:
     registryFetchIntervalSeconds: 1
     serviceUrl:
